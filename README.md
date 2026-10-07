@@ -159,24 +159,3 @@ npm --prefix frontend run build
 ```
 
 Os testes cobrem autenticação local, criação explícita de administrador, carregamento das páginas e isolamento do acesso às reuniões. O navegador também verifica ausência de exceções JavaScript e transbordamento horizontal nas telas capturadas.
-
-O build pode emitir avisos sobre o tamanho dos bundles e a base Browserslist antiga. O Django mantém dois avisos sobre relações `ForeignKey(unique=True)` herdadas; essas relações não foram convertidas para evitar alterar os acessos usados pelo sistema.
-
-### Atualizar as capturas
-
-Com a aplicação local iniciada e o frontend compilado, entre com uma conta local vinculada a participantes e capture as telas em desktop e celular. Salve as imagens em `docs/screenshots/`, mantendo os nomes referenciados neste README.
-
-Use dados fictícios nas imagens. O perfil do navegador e as sessões temporárias estão excluídos do Git.
-
-## Mudanças desta reestruturação
-
-- Nome, logo, favicon, rotas e painel administrativo atualizados para DevSync.
-- Paleta preta e azul aplicada às telas e controles principais.
-- Links e configuração de servidores internos substituídos por caminhos locais.
-- Botões de guias e documentos corporativos removidos da aplicação.
-- Configurações sensíveis passaram a usar variáveis de ambiente.
-- Perfil do usuário interpretado como JSON e carregamento com fallback para fontes indisponíveis.
-- Navegação sem autenticação tratada e falhas de API deixam de prender a tela no carregamento.
-- Login com senha e criação de superusuário habilitados para instalação independente.
-- API restringe leitura aos participantes e alterações ao mentor responsável.
-- Backups, bancos históricos, certificados e arquivos gerados estão excluídos do versionamento. Os arquivos históricos foram preservados para consulta e não compõem a aplicação ativa.
