@@ -1,0 +1,6 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><meta name="description" content="DevSync — reuniões, metas e desenvolvimento em sintonia."><link rel="icon" type="image/svg+xml" href="<%= BASE_URL %>favicon.svg"><title>DevSync</title></head>
+<body><noscript>Ative o JavaScript para usar o DevSync.</noscript>
+{% if usr_prf %}{{ usr_prf|json_script:"usr-prf" }}{% endif %}
+<script>window.getProfile = function () { const element = document.getElementById('usr-prf'); if (!element) return null; try { return JSON.parse(element.textContent); } catch (error) { return null; } finally { element.remove(); } };</script>
+<div id="app"></div></body></html>

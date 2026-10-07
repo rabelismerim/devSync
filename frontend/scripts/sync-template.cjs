@@ -1,0 +1,5 @@
+const fs = require('fs')
+const path = require('path')
+const root = path.resolve(__dirname, '../../backend')
+fs.copyFileSync(path.join(root, 'static/frontend/index.html'), path.join(root, 'templates/frontend/index.html'))
+console.log('Django template synchronized with the DevSync build.')
