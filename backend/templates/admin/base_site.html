@@ -1,0 +1,10 @@
+{% extends "admin/base.html" %}
+{% load static %}
+
+{% block title %}{{ site_title }}: {{ title }}{% if subtitle %} | {{ subtitle }}{% endif %}{% endblock %}
+
+{% block branding %}
+<a href="{% url 'admin:index' %}"><img width="176" height="42" src="{% static 'frontend/devsync.svg' %}" alt="DevSync" /></a>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}
